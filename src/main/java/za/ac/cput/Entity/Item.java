@@ -17,6 +17,7 @@ public class Item {
         this.itemType=builder.itemType;
     }
 
+    //Builder for Item Entity
     public static class Builder{
         private String itemNumber, prescriptionNumber, itemName, itemType;
         private double itemPrice;
@@ -52,6 +53,7 @@ public class Item {
 
     }
 
+    //to String for Item Entity
     @Override
     public String toString() {
         return "Item{" +

@@ -8,6 +8,7 @@ package za.ac.cput.Entity;
 public class PrescriptionItem {
     private String prescriptionNumber, itemNumber;
 
+    //Builder for PrescriptionItem Entity
     private PrescriptionItem(Builder builder){
         this.prescriptionNumber=builder.prescriptionNumber;
         this.itemNumber=builder.itemNumber;
@@ -30,6 +31,7 @@ public class PrescriptionItem {
         }
     }
 
+    //to String for PrescriptionItem Entity
     @Override
     public String toString() {
         return "PrescriptionItem{" +
