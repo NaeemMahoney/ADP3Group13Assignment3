@@ -2,21 +2,22 @@ package za.ac.cput.Entity;
 
 
 /*
+* Doctor Entity
 * Name :Mpumelelo Magagula
 * Student Number:218136021
-* Description:
+* Description: This entity display all the records of doctors working in the clinic and their occupation level and status.
 * Date:08 June 2021
 * */
 public class Doctor {
 
-   private String doctorNumber, firstName, lastName, emailAddress, ContactNumber;
+   private String doctorNumber, firstName, lastName, emailAddress, contactNumber;
 
     private Doctor(Builder builder) {
         this.doctorNumber = builder.doctorNumber;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.emailAddress = builder.emailAddress;
-        this.ContactNumber = builder.ContactNumber;
+        this.contactNumber = builder.ContactNumber;
     }
 
     @Override
@@ -26,7 +27,7 @@ public class Doctor {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
-                ", ContactNumber='" + ContactNumber + '\'' +
+                ", ContactNumber='" + contactNumber + '\'' +
                 '}';
     }
 
@@ -74,7 +75,7 @@ public class Doctor {
              this.firstName = doctor.firstName;
              this.lastName = doctor.lastName;
              this.emailAddress = doctor.emailAddress;
-             this.ContactNumber = doctor.ContactNumber;
+             this.ContactNumber = doctor.contactNumber;
 
              return  this;
          }
