@@ -1,4 +1,27 @@
+/*
+Ra'ees Manuel 219074089
+Applications development practice 3 Assignment 3
+Factory class
+ */
+
 package za.ac.cput.Factory;
 
-public class AddressFactory {
+import za.ac.cput.Entity.Address;
+
+
+public class AddressFactory
+{
+    public static  Address build(String addressNumber, String houseNumber,String streetName, String suburb, String postalCode)
+    {
+        if (addressNumber.isEmpty() || streetName.isEmpty()|| houseNumber.isEmpty() || suburb.isEmpty() || postalCode.isEmpty())
+
+            return null;
+
+        return new Address.Builder()
+                .setAddressNumber(addressNumber).setHouseNumber(houseNumber)
+                .setStreetName(streetName).setSuburb(suburb).setPostalCode(postalCode).build();
+
+    }
+
+
 }
