@@ -1,14 +1,15 @@
 /*
-Ra'ees Manuel 219074089
-Applications development practice 3 Assignment 3
+Address.java
 Builder class
+Author:Ra'ees Manuel 219074089
+Date:24 May 2021
  */
 
 package za.ac.cput.Entity;
 
 public class Address
 {
-private String addressNumber;
+private String addressNumber; //Declaring strings
 private String houseNumber;
 private String streetName;
 private String suburb;
@@ -24,7 +25,7 @@ public Address(Builder builder)
     this.postalCode = builder.postalCode;
 }
 
-    public static class Builder
+    public static class Builder   //Builder class
     {
         private String addressNumber;
         private String houseNumber;
