@@ -9,21 +9,21 @@ package za.ac.cput.Entity;
 
 public class Address
 {
-private String addressNumber; //Declaring strings
-private String houseNumber;
-private String streetName;
-private String suburb;
-private String postalCode;
+    private String addressNumber; //Declaring strings
+    private String houseNumber;
+    private String streetName;
+    private String suburb;
+    private String postalCode;
 
-public Address(Builder builder)
-{
+    public Address(Builder builder)
+    {
 
-    this.addressNumber = builder.addressNumber;
-    this.houseNumber = builder.houseNumber;
-    this.streetName = builder.streetName;
-    this.suburb = builder.suburb;
-    this.postalCode = builder.postalCode;
-}
+        this.addressNumber = builder.addressNumber;
+        this.houseNumber = builder.houseNumber;
+        this.streetName = builder.streetName;
+        this.suburb = builder.suburb;
+        this.postalCode = builder.postalCode;
+    }
 
     public static class Builder   //Builder class
     {
@@ -67,7 +67,7 @@ public Address(Builder builder)
         {
             return new Address(this);
         }
-}
+    }
     @Override
     public String toString() {
         return "Address{" +
