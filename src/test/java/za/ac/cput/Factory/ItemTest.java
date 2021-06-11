@@ -1,4 +1,4 @@
-package za.ac.cput.Entity;
+package za.ac.cput.Factory;
 //Na'eem Mahoney
 //218190751
 //ADP3
@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+import za.ac.cput.Entity.Item;
 import za.ac.cput.Factory.ItemFactory;
 
 class ItemTest {
