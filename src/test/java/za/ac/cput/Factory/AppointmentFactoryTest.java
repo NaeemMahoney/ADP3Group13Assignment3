@@ -1,4 +1,4 @@
-package za.ac.cput.Entity;
+package za.ac.cput.Factory;
 
 /* AppointmentFactoryTest.java
    Test class for Appointment Factory
@@ -9,6 +9,7 @@ package za.ac.cput.Entity;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+import za.ac.cput.Entity.Appointment;
 import za.ac.cput.Factory.AppointmentFactory;
 
 import static org.junit.jupiter.api.Assertions.*;

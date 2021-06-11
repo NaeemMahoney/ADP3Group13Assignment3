@@ -4,17 +4,18 @@
               which is basically what the client/patient will see
  Due Date: 11 June 2021
  */
-package za.ac.cput.Entity;
+package za.ac.cput.Factory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+import za.ac.cput.Entity.Patient;
 import za.ac.cput.Factory.PatientFactory;
 
 import javax.swing.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-public class PatientTest {
+public class PatientFactoryTest {
     String firstName, lastName, contactNumber;
     Patient patient1, patient2;
     @BeforeEach

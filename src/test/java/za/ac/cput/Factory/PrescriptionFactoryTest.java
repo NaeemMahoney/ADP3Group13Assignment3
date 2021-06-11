@@ -1,4 +1,4 @@
-package za.ac.cput.Entity;
+package za.ac.cput.Factory;
 /* PrescriptionFactoryTest.java
  This is the Prescription Test class
  Author: Ratidzai Makondo - (218187289)
