@@ -17,6 +17,26 @@ public class Item {
         this.itemType=builder.itemType;
     }
 
+    public String getItemNumber() {
+        return itemNumber;
+    }
+
+    public String getPrescriptionNumber() {
+        return prescriptionNumber;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public String getItemType() {
+        return itemType;
+    }
+
+    public double getItemPrice() {
+        return itemPrice;
+    }
+
     //Builder for Item Entity
     public static class Builder{
         private String itemNumber, prescriptionNumber, itemName, itemType;
@@ -51,6 +71,14 @@ public class Item {
             return new Item(this);
         }
 
+        public Builder copy(Item item) {
+            this.itemNumber = item.itemNumber;
+            this.prescriptionNumber = item.prescriptionNumber;
+            this.itemName = item.itemName;
+            this.itemPrice = item.itemPrice;
+            this.itemType = item.itemType;
+            return this;
+        }
     }
 
     //to String for Item Entity
