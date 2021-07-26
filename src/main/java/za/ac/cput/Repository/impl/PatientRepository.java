@@ -3,10 +3,14 @@ package za.ac.cput.Repository.impl;
 import za.ac.cput.Entity.Patient;
 import za.ac.cput.Repository.IRepository;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class PatientRepository implements IRepository<Patient, String> {
     private Set<Patient> patientDb;
+    public PatientRepository(){
+        this.patientDb = new HashSet<>();
+    }
     @Override
     public Patient create(Patient patient) {
         this.patientDb.add(patient);

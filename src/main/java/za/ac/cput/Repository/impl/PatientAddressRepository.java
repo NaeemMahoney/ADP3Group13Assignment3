@@ -2,12 +2,17 @@ package za.ac.cput.Repository.impl;
 
 import za.ac.cput.Entity.Patient;
 import za.ac.cput.Entity.PatientAddress;
+import za.ac.cput.Factory.PatientAddressFactory;
 import za.ac.cput.Repository.IRepository;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class PatientAddressRepository implements IRepository<PatientAddress,String> {
     private Set<PatientAddress> patientAddressDb;
+    public PatientAddressRepository(){
+        this.patientAddressDb = new HashSet<>();
+    }
     @Override
     public PatientAddress create(PatientAddress patientAddress) {
         this.patientAddressDb.add(patientAddress);
