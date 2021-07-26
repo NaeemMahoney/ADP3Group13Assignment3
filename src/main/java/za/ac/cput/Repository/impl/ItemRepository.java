@@ -5,11 +5,12 @@ package za.ac.cput.Repository.impl;
 //Repository Class for Item Entity
 
 import za.ac.cput.Entity.Item;
+import za.ac.cput.Repository.IRepository;
 
 import java.util.Set;
 import java.util.HashSet;
 
-public class ItemRepository implements IItemRepository {
+public class ItemRepository implements IRepository<Item, String> {
     private static ItemRepository repository = null;
     private Set <Item> itemDB = null;
 

@@ -51,11 +51,4 @@ class ItemRepositoryTest {
         assertTrue(deleted);
         System.out.println("Item Deleted: "+ deleted);
     }
-
-    //This test displays all Items
-    @Test
-    void e_itemGetAll(){
-        System.out.println("Show All Items: ");
-        System.out.println(repository.getAll());
-    }
 }

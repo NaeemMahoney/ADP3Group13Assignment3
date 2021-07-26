@@ -49,12 +49,4 @@ class PrescriptionItemRepositoryTest {
         assertTrue(deleted);
         System.out.println("PrescriptionItem Deleted: "+ deleted);
     }
-
-    //This test displays all PrescriptionItems
-    @Test
-    void e_itemGetAll(){
-        System.out.println("Show All Items: ");
-        System.out.println(repository.getAll());
-    }
-
 }

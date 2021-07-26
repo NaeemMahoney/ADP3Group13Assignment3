@@ -5,11 +5,12 @@ package za.ac.cput.Repository.impl;
 //Repository Class for PrescriptionItem Entity
 
 import za.ac.cput.Entity.PrescriptionItem;
+import za.ac.cput.Repository.IRepository;
 
 import java.util.Set;
 import java.util.HashSet;
 
-public class PrescriptionItemRepository implements IPrescriptionItemRepository {
+public class PrescriptionItemRepository implements IRepository<PrescriptionItem, String> {
     private static PrescriptionItemRepository repository = null;
     private Set <PrescriptionItem> prescriptionitemDB = null;
 
