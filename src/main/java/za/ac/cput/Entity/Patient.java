@@ -15,6 +15,23 @@ public class Patient {
         this.lastName = builder.lastName;
         this.contactNumber = builder.contactNumber;
     }
+
+    public String getPatientNumber() {
+        return patientNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
     //builder pattern
     public static class Builder{
         private String patientNumber, firstName, lastName, contactNumber;
@@ -41,6 +58,14 @@ public class Patient {
 
         public Patient build(){
             return new Patient(this);
+        }
+
+        public Builder copy(Patient patient){
+            this.contactNumber = contactNumber;
+            this.patientNumber = patientNumber;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            return this;
         }
 
 

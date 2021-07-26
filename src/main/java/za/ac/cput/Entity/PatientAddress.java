@@ -16,6 +16,18 @@ public class PatientAddress {
         this.patientAddressNumber = builder.patientAddressNumber;
     }
 
+    public String getPatientAddressNumber() {
+        return patientAddressNumber;
+    }
+
+    public String getPatientNumber() {
+        return patientNumber;
+    }
+
+    public String getAddressNumber() {
+        return addressNumber;
+    }
+
     public static class Builder{
         private String patientNumber, patientAddressNumber, addressNumber;
 
@@ -38,6 +50,12 @@ public class PatientAddress {
             return new PatientAddress(this);
         }
 
+        public PatientAddress.Builder copy(PatientAddress patientAddress){
+            this.patientAddressNumber = patientNumber;
+            this.patientNumber = patientNumber;
+            this.addressNumber= addressNumber;
+            return this;
+        }
 
     }
     @Override
