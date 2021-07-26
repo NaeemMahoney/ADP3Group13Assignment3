@@ -13,6 +13,15 @@ public class PrescriptionItem {
         this.prescriptionNumber=builder.prescriptionNumber;
         this.itemNumber=builder.itemNumber;
     }
+
+    public String getPrescriptionNumber() {
+        return prescriptionNumber;
+    }
+
+    public String getItemNumber() {
+        return itemNumber;
+    }
+
     public static class Builder{
         private String prescriptionNumber, itemNumber;
 
@@ -28,6 +37,12 @@ public class PrescriptionItem {
 
         public PrescriptionItem builder(){
             return new PrescriptionItem(this);
+        }
+
+        public PrescriptionItem.Builder copy(PrescriptionItem prescriptionitem) {
+            this.prescriptionNumber = prescriptionitem.prescriptionNumber;
+            this.itemNumber = prescriptionitem.itemNumber;
+            return this;
         }
     }
 
