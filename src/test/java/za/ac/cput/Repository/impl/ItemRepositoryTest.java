@@ -1,4 +1,4 @@
-package za.ac.cput.impl;
+package za.ac.cput.Repository.impl;
 //Na'eem Mahoney
 //218190751
 //ADP3
@@ -6,11 +6,11 @@ package za.ac.cput.impl;
 //Test Class for Item Repository
 
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.Entity.Item;
 import za.ac.cput.Factory.ItemFactory;
+import za.ac.cput.Repository.impl.ItemRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 

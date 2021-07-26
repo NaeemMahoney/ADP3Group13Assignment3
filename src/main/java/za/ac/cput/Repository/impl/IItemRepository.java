@@ -1,8 +1,7 @@
-package za.ac.cput.impl;
+package za.ac.cput.Repository.impl;
 //Na'eem Mahoney
 //218190751
 //ADP3
-//Assignment 3
 //IRepository Class for Item Entity
 
 import za.ac.cput.Entity.Item;

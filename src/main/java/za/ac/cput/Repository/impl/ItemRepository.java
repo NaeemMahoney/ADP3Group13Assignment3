@@ -1,18 +1,15 @@
-package za.ac.cput.impl;
+package za.ac.cput.Repository.impl;
 //Na'eem Mahoney
 //218190751
 //ADP3
-//Assignment 3
 //Repository Class for Item Entity
 
 import za.ac.cput.Entity.Item;
-import za.ac.cput.Repository.IRepository;
-import za.ac.cput.Factory.ItemFactory;
 
 import java.util.Set;
 import java.util.HashSet;
 
-public class ItemRepository implements IItemRepository{
+public class ItemRepository implements IItemRepository {
     private static ItemRepository repository = null;
     private Set <Item> itemDB = null;
 
