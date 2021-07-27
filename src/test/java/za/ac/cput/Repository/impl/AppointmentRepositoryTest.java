@@ -48,9 +48,4 @@ public class AppointmentRepositoryTest {
         System.out.println("Appointment Deleted: "+ deleted);
     }
 
-    @Test
-    void d_getAll(){
-        System.out.println("Show All Appointments: ");
-        System.out.println(repository.getAll());
-    }
 }

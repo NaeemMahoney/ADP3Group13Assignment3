@@ -1,4 +1,4 @@
-package za.ac.cput.impl;
+package za.ac.cput.Repository.impl;
 
 // Name: Vaneza Sito
 // Student no: 211315044
@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.Entity.Receptionist;
 import za.ac.cput.Factory.ReceptionistFactory;
+import za.ac.cput.Repository.impl.ReceptionistRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
