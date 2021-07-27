@@ -34,6 +34,9 @@ public class  Prescription {
                 ", dosage=" + dosage +
                 '}';
     }
+    public String getPrescriptionNumber() {
+        return prescriptionNumber;
+    }
 
     public static class Builder{
         private String prescriptionNumber;
@@ -41,6 +44,7 @@ public class  Prescription {
         private String doctorNumber;
         private double bill;
         private int dosage;
+
 
         public Builder setPrescriptionNumber(String prescriptionNumber){
             this.prescriptionNumber  = prescriptionNumber;
