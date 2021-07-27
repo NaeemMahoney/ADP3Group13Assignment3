@@ -32,7 +32,7 @@ public  class DoctorRepository implements IRepository<Doctor, String> {
     @Override
     public Doctor read(String doctorNumber) {
         for (Doctor d : doctorDB)
-            if (d.getID().equals(doctorNumber)) {
+            if (d.getDoctorNumber().equals(doctorNumber)) {
                 return d;
             }
         return  null;
@@ -40,14 +40,14 @@ public  class DoctorRepository implements IRepository<Doctor, String> {
 
     @Override
     public Doctor update(Doctor doctor) {
-        Doctor oldDoctor = read(doctor.getID());
+        Doctor oldDoctor = read(doctor.getDoctorNumber());
         if (oldDoctor != null){
             doctorDB.remove(oldDoctor);
             doctorDB.add(doctor);
             return doctor;
         }
         return null;
-    }*/
+    }
 
     @Override
     public boolean delete(String doctorNumber) {

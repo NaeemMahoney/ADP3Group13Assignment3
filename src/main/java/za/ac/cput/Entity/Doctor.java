@@ -19,6 +19,26 @@ public class Doctor {
         this.contactNumber = builder.ContactNumber;
     }
 
+    public String getDoctorNumber() {
+        return doctorNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
     @Override
     public String toString() {
         return "Builder{" +

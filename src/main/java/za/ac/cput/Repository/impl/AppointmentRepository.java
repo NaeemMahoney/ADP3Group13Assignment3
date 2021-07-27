@@ -7,13 +7,12 @@ package za.ac.cput.Repository.impl;
 */
 
 import za.ac.cput.Entity.Appointment;
-import za.ac.cput.Factory.AppointmentFactory;
-import za.ac.cput.Repository.IAppointmentRepository;
+import za.ac.cput.Repository.IRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class AppointmentRepository implements IAppointmentRepository {
+public class AppointmentRepository implements IRepository<Appointment ,String>{
     private static AppointmentRepository repository = null;
     private Set<Appointment> appoinmentDB;
 
@@ -66,9 +65,4 @@ public class AppointmentRepository implements IAppointmentRepository {
         return false;
     }
 
-
-    @Override
-    public Set<Appointment> getAll() {
-        return this.appoinmentDB;
-    }
 }

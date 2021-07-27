@@ -1,15 +1,16 @@
-package za.ac.cput.impl;
+package za.ac.cput.Repository.impl;
 
 // Name: Vaneza Sito
 // Student no: 211315044
 //IRepository Class for Receptionist Entity
 
 import za.ac.cput.Entity.Receptionist;
+import za.ac.cput.Repository.IRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class ReceptionistRepository implements IReceptionistRepository{
+public class ReceptionistRepository implements IRepository<Receptionist ,String>{
     private static ReceptionistRepository repository = null;
     private Set <Receptionist> receptionistDB = null;
     private Object Receptionist;
