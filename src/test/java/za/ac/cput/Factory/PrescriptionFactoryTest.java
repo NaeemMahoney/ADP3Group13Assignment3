@@ -55,7 +55,7 @@ class PrescriptionFactoryTest {
 
     @Test
     public void createPrescription() {
-        Prescription prescription = PrescriptionFactory.createPrescription("PN01", "DA01", 100.00, 5);
+        Prescription prescription = PrescriptionFactory.createPrescription("PN01", "D230", 100.00, 5);
          System.out.println(prescription);
     }
 

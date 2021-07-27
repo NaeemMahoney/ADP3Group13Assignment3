@@ -9,8 +9,8 @@ Date: 11 June 2021
 
 public class PrescriptionFactory {
     public static Prescription createPrescription(String patientNumber, String doctorNumber, double bill, int dosage) {
-        int random = (int) (Math.random() * 999) + 1;
 
+        int random = (int)(Math.random() * 999) + 1;
         String prescriptionNumber = "PR01" + Integer.toString(random);
 
         Prescription prescription = new Prescription.Builder()
