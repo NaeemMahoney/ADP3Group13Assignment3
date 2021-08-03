@@ -29,7 +29,6 @@ public class PrescriptionRepository implements IRepository<Prescription, String>
         return repository;
     }
 
-    @Override
     public Prescription create(Prescription prescription) {
         boolean success = PrescriptionDb.add(prescription);
         if (!success)
@@ -52,11 +51,12 @@ public class PrescriptionRepository implements IRepository<Prescription, String>
     public Prescription update (Prescription prescription) {
         Prescription newPrescription = read(prescription.getPrescriptionNumber());
         if (newPrescription != null) {
+
             PrescriptionDb.remove(newPrescription);
             PrescriptionDb.add(prescription);
-            return prescription;
         }
-        return null;
+
+        return prescription;
     }
     @Override
     public boolean delete(String PrescriptionNumber) {

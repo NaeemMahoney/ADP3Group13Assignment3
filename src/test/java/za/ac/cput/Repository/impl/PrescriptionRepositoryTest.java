@@ -18,7 +18,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class PrescriptionRepositoryTest {
     private static PrescriptionRepository repository = PrescriptionRepository.getRepository();
-    private static Prescription prescription = PrescriptionFactory.createPrescription("PNO1","D230",100.00,5);
+    private static Prescription prescription = PrescriptionFactory.createPrescription("PNO2","D230",15,6);
+
 
     @Test
     void create() {
@@ -30,21 +31,22 @@ public class PrescriptionRepositoryTest {
     void read() {
         Prescription read = repository.read(prescription.getPrescriptionNumber());
         assertNull(read);
-        System.out.println("The following was read" + " " + read);
+        System.out.println("The following has been read" + " " + prescription.getPrescriptionNumber() + " ");
 
     }
+
     @Test
     void update() {
-        Prescription updated = new Prescription.Builder().copy(prescription).setPatientNumber("PN02").setDoctorNumber("D231").setBill(120.00).setDosage(15).build();
-       assertNull(repository.update(updated));
-        System.out.println("Final update" + updated );
+        Prescription updated = new Prescription.Builder().copy(prescription).setPrescriptionNumber("PN300").setPatientNumber("PN12").setDoctorNumber("D231").setBill(1.25).setDosage(1).build();
+      assertNotNull(repository.update(updated));
+        System.out.println("Final update" +" "+ updated );
 
     }
     @Test
     void delete() {
-        boolean victory = repository.delete(prescription.getPrescriptionNumber());
-        assertFalse(victory);
-        System.out.println("This was deleted" + victory);
+        boolean complete = repository.delete(prescription.getPrescriptionNumber());
+        assertTrue(complete);
+        System.out.println("The following has been deleted" + " " + complete);
 
     }
      @Test
@@ -52,8 +54,4 @@ public class PrescriptionRepositoryTest {
          System.out.println("display all contents");
          System.out.println(repository.getAll());
      }
-
-
-
-
 }
