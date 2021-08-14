@@ -9,6 +9,8 @@ public class Item {
     private String itemNumber, prescriptionNumber, itemName, itemType;
     private double itemPrice;
 
+    private Item(){}
+
     private Item (Builder builder){
         this.itemNumber=builder.itemNumber;
         this.prescriptionNumber=builder.prescriptionNumber;

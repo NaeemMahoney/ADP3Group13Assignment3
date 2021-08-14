@@ -4,11 +4,14 @@ package za.ac.cput.Service.impl;
 //ADP3
 //Service Class for Item Entity
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.Entity.Item;
 import za.ac.cput.Repository.impl.ItemRepository;
 import za.ac.cput.Service.iService;
 
+import java.util.Set;
 
+@Service
 public class ItemService implements iItemService{
     private static ItemService itemService = null;
     private ItemRepository itemRepository = null;
@@ -43,4 +46,7 @@ public class ItemService implements iItemService{
     public boolean delete(String itemNumber){
         return this.itemRepository.delete(itemNumber);
     }
+
+    @Override
+    public Set<Item> getAll(){return this.itemRepository.getAll();}
 }
