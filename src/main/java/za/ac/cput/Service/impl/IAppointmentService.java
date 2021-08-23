@@ -9,6 +9,9 @@ package za.ac.cput.Service.impl;
 import za.ac.cput.Entity.Appointment;
 import za.ac.cput.Service.iService;
 
+import java.util.Set;
+
 public interface IAppointmentService extends iService<Appointment, String>{
+    public Set<Appointment> getAll();
 
 }

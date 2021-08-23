@@ -9,6 +9,9 @@ package za.ac.cput.Entity;
 public class Appointment {
     private String appointmentNumber, date, time, reason, patientNumber, doctorNumber, receptionistNumber;
 
+    public Appointment() {
+    }
+
     public Appointment(Builder builder) {
         this.appointmentNumber = builder.appointmentNumber;
         this.date = builder.date;

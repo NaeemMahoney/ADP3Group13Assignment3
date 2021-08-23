@@ -6,15 +6,19 @@ package za.ac.cput.Service.impl;
    Due Date: 02 August 2021
 */
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.Entity.Appointment;
 import za.ac.cput.Repository.impl.AppointmentRepository;
 
+import java.util.Set;
+
+@Service
 public class AppointmentService implements IAppointmentService{
     private static AppointmentService service = null;
     private AppointmentRepository repository = null;
 
     private AppointmentService(){
-        this.repository = AppointmentService.service.repository;
+        this.repository = AppointmentRepository.getRepository();
     }
 
     public static AppointmentService getService(){
@@ -44,4 +48,6 @@ public class AppointmentService implements IAppointmentService{
         return this.repository.delete(appointmentNumber);
     }
 
+    @Override
+    public Set<Appointment> getAll() { return this.repository.getAll(); }
 }

@@ -14,11 +14,11 @@ import java.util.Set;
 
 public class AppointmentRepository implements IRepository<Appointment ,String>{
     private static AppointmentRepository repository = null;
-    private Set<Appointment> appoinmentDB;
+    private Set<Appointment> appointmentDB = null;
 
     private AppointmentRepository()
     {
-        this.appoinmentDB = new HashSet<>();
+        appointmentDB = new HashSet<Appointment>();
     }
 
     public static AppointmentRepository getRepository() {
@@ -31,13 +31,15 @@ public class AppointmentRepository implements IRepository<Appointment ,String>{
 
     @Override
     public Appointment create(Appointment appointment) {
-        this.appoinmentDB.add(appointment);
+        boolean success = appointmentDB.add(appointment);
+        if(!success)
+            return null;
         return appointment;
     }
 
     @Override
     public Appointment read(String appointmentNumber){
-        for(Appointment a : appoinmentDB)
+        for(Appointment a : appointmentDB)
             if(a.getAppointmentNumber().equals(appointmentNumber)){
                 return a;
             }
@@ -48,8 +50,8 @@ public class AppointmentRepository implements IRepository<Appointment ,String>{
     public Appointment update(Appointment appointment){
         Appointment oldAppointment = read(appointment.getAppointmentNumber());
         if(oldAppointment != null){
-            this.appoinmentDB.remove(oldAppointment);
-            this.appoinmentDB.add(appointment);
+            appointmentDB.remove(oldAppointment);
+            appointmentDB.add(appointment);
             return appointment;
         }
         return null;
@@ -59,10 +61,13 @@ public class AppointmentRepository implements IRepository<Appointment ,String>{
     public boolean delete(String appointmentNumber) {
         Appointment appointmentToDelete = read(appointmentNumber);
         if (appointmentNumber != null) {
-            this.appoinmentDB.remove(appointmentToDelete);
+            appointmentDB.remove(appointmentToDelete);
             return true;
         }
         return false;
     }
 
+    public Set<Appointment> getAll() {
+        return appointmentDB;
+    }
 }
